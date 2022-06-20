@@ -35,10 +35,12 @@ public class TobaccoStallTest {
     }
 
     @Test
-    public void checkIfVisitorIsOldEnoughToBuyTobacco(){
+    public void checkIfVisitorIsOldEnoughToBuyTobaccoTRUE(){
         assertEquals(true, tobaccoStall.isAllowedTo(visitor1));
-        assertEquals(false, tobaccoStall.isAllowedTo(visitor2));
     }
 
-
+    @Test
+    public void checkIfVisitorIsOldEnoughToBuyTobaccoFALSE(){
+        assertEquals(false, tobaccoStall.isAllowedTo(visitor2));
+    }
 }

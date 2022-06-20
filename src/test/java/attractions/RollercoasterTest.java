@@ -40,14 +40,25 @@ public class RollercoasterTest {
     }
 
     @Test
-    public void priceDependentOnHeight(){
+    public void priceDependentOnHeightOVERLimit(){
         assertEquals(16.80, rollerCoaster.priceFor(visitor1), 0.01);
-        assertEquals(8.40,rollerCoaster.priceFor(visitor2),0.01);
+
     }
 
     @Test
-    public void checkIfVisitorIsAllowedOnRollerCoaster(){
+    public void priceDependentOnHeightUNDERLimit(){
+        assertEquals(16.80, rollerCoaster.priceFor(visitor1), 0.01);
+    }
+
+
+
+    @Test
+    public void checkIfVisitorIsAllowedOnRollerCoasterTRUE(){
         assertEquals(true, rollerCoaster.isAllowedTo(visitor1));
+    }
+
+    @Test
+    public void checkIfVisitorIsAllowedOnRollerCoasterFALSE(){
         assertEquals(false,rollerCoaster.isAllowedTo(visitor2));
     }
 }

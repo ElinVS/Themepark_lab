@@ -40,10 +40,12 @@ public class DodgemTest {
     }
 
     @Test
-    public void priceDependentOnAge(){
-        assertEquals(2.25, dodgems.priceFor(visitor2),0.00);
-        assertEquals(4.50, dodgems.priceFor(visitor1), 0.01);
+    public void priceDependentOnAgeOVER12(){
+        assertEquals(4.50, dodgems.priceFor(visitor1), 0.00);
     }
 
-
+    @Test
+    public void priceDependentOnAgeUNDER12(){
+        assertEquals(2.25, dodgems.priceFor(visitor2),0.00);
+    }
 }
